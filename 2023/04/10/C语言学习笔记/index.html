@@ -175,10 +175,10 @@
 </li>
 <li><p>更好的方式，是定义一个常量：</p>
 <ul>
-<li>const int AMOUNT &#x3D; 100;</li>
+<li><code>const int AMOUNT = 100</code>;</li>
 </ul>
 </li>
-<li><p>const是一个修饰符，加在int的前面，用来给这个变量加上一个const（不变的）的属性。这个const的属性表示这个变量的值一旦初始化，就不能再修改了。</p>
+<li><p><code>const</code>是一个修饰符，加在int的前面，用来给这个变量加上一个const（不变的）的属性。这个const的属性表示这个变量的值一旦初始化，就不能再修改了。</p>
 </li>
 <li><p>如果你试图对常量做修改，把它放在赋值运算符的左边，就会被编译器发现，指出为一个错误。</p>
 </li>
@@ -317,8 +317,8 @@
 <h3 id="3-1-1-sizeof"><a href="#3-1-1-sizeof" class="headerlink" title="3.1.1 sizeof"></a>3.1.1 sizeof</h3><ul>
 <li><p>sizeof是一个运算符，给出某个类型或变量在内存中所占的字节数</p>
 <ul>
-<li>sizeof(int)</li>
-<li>sizeof(i)</li>
+<li><code>sizeof(int)</code></li>
+<li><code>sizeof(i)</code></li>
 </ul>
 </li>
 <li><p>是<strong>静态运算符</strong>，它的结果在编译时刻就决定了</p>
@@ -354,7 +354,7 @@
 <h3 id="3-1-3-unsigned"><a href="#3-1-3-unsigned" class="headerlink" title="3.1.3 unsigned"></a>3.1.3 unsigned</h3><ul>
 <li><p>如果一个字面量常数想要表达自己是unsigned，可以在后面加u或U</p>
 <ul>
-<li>255U</li>
+<li><code>255U</code></li>
 </ul>
 </li>
 <li><p>用l或L表示long(long)</p>
@@ -372,8 +372,8 @@
 <ul>
 <li>带小数点的字面量是double而非float</li>
 <li>float需要用f或F后缀来表明身份</li>
-<li>f1 &#x3D;&#x3D; f2可能失败<ul>
-<li>fabs(f1-f2) &lt; 1e-12</li>
+<li><code>f1 == f2</code>可能失败<ul>
+<li><code>fabs(f1-f2) &lt; 1e-12</code></li>
 </ul>
 </li>
 </ul>
@@ -383,7 +383,7 @@
 <li>现代CPU能直接对double做硬件运算，性能不会比float差，在64位的机器上，数据存储的速度也不比float慢</li>
 </ul>
 <h3 id="3-1-5-bool"><a href="#3-1-5-bool" class="headerlink" title="3.1.5 bool"></a>3.1.5 bool</h3><ul>
-<li>#include &lt;stdbool.h&gt;</li>
+<li><code>#include &lt;stdbool.h&gt;</code></li>
 <li>之后就可以使用bool和true、false</li>
 </ul>
 <h2 id="3-2-类型转换"><a href="#3-2-类型转换" class="headerlink" title="3.2 类型转换"></a>3.2 类型转换</h2><ul>
@@ -402,7 +402,7 @@
 </li>
 <li><p>注意这时候的安全性，小的变量不总能表达大的量</p>
 <ul>
-<li>(short)32768</li>
+<li><code>(short)32768</code></li>
 </ul>
 </li>
 <li><p>只是从那个变量计算出了一个<strong>新的类型的值</strong>，它并不改变那个变量，无论是值还是类型都不改变</p>
@@ -487,10 +487,10 @@
 </tr>
 </tbody></table>
 <h3 id="3-3-2-短路"><a href="#3-3-2-短路" class="headerlink" title="3.3.2 短路"></a>3.3.2 短路</h3><ul>
-<li><p>逻辑运算是自左向右进行的，&#x3D;&#x3D;如果左边的结果已经能够决定结果了，就不会做右边的计算&#x3D;&#x3D;</p>
+<li><p>逻辑运算是自左向右进行的，<strong>如果左边的结果已经能够决定结果了，就不会做右边的计算</strong></p>
 <ul>
-<li>a &#x3D;&#x3D; 6 &amp;&amp; b &#x3D;&#x3D; 1</li>
-<li>a&#x3D;&#x3D;6 &amp;&amp; b+&#x3D;1</li>
+<li><code>a==6 &amp;&amp; b==1</code></li>
+<li><code>a==6 &amp;&amp; b+=1</code></li>
 </ul>
 </li>
 <li><p>对于&amp;&amp;，左边是false时就不做右边了</p>
@@ -512,13 +512,13 @@
 
 <p>在for中使用</p>
 <ul>
-<li>for(i&#x3D;0 , j&#x3D;10 ; i&lt;j ; i++ , j– )</li>
+<li><code>for(i=0 , j=10 ; i&lt;j ; i++ , j-- )</code></li>
 </ul>
 <h1 id="4-函数"><a href="#4-函数" class="headerlink" title="4 函数"></a>4 函数</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> begin, <span class="type">int</span> end)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=begin; i&lt;=end; i++)&#123;</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d到%d的和是%d\n&quot;</span>, begin, end, sum);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    sum(<span class="number">1</span>, <span class="number">10</span>);</span><br><span class="line">    sum(<span class="number">20</span>, <span class="number">30</span>);</span><br><span class="line">    sum(<span class="number">35</span>, <span class="number">45</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>像这样把sum()写在上面，是因为：C的编译器<strong>自上而下</strong>顺序分析你的代码</p>
 <ul>
-<li>在看到sum(1, 10)的时候，它需要知道sum()的样子，也就是sum()要几个参数，每个参数的类型如何，返回什么类型，这样它才能检查你对sum()的调用是否正确。</li>
+<li>在看到<code>sum(1, 10)</code>的时候，它需要知道sum()的样子，也就是sum()要几个参数，每个参数的类型如何，返回什么类型，这样它才能检查你对sum()的调用是否正确。</li>
 </ul>
 <h2 id="4-1-参数传递"><a href="#4-1-参数传递" class="headerlink" title="4.1 参数传递"></a>4.1 参数传递</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">cheer</span><span class="params">(<span class="type">int</span> i)</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;cheer %d\n&quot;</span>, i);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    cheer(<span class="number">2.4</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
