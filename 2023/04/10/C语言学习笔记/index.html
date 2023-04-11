@@ -161,11 +161,11 @@
 </li>
 <li><p>变量需要一个名字，变量的名字是一种“标识符”，意思是它是用来识别这个和那个的不同的名字。</p>
 </li>
-<li><p>标识符有标识符的构造规则。基本的原则是：标识符只能由__字母__、__数字__和__下划线__组成，数字不可以出现在第一个位置上，C语言的关键字（有的地方叫它们保留字）不可以用做标识符。</p>
+<li><p>标识符有标识符的构造规则。基本的原则是：标识符只能由<strong>字母</strong>、<strong>数字</strong>和<strong>下划线</strong>组成，数字不可以出现在第一个位置上，C语言的关键字（有的地方叫它们保留字）不可以用做标识符。</p>
 </li>
 <li><p>所有变量在第一次被使用（出现在赋值运算符的右边）之前应该被赋值一次。</p>
 </li>
-<li><p>C是一种有类型的语言，所有的变量在使用之前必须__定义__或__声明__，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。</p>
+<li><p>C是一种有类型的语言，所有的变量在使用之前必须<strong>定义</strong>或<strong>声明</strong>，所有的变量必须具有确定的数据类型。数据类型表示在变量中可以存放什么样的数据，变量中只能存放指定类型的数据，程序运行过程中也不能改变变量的类型。</p>
 </li>
 </ul>
 <h2 id="1-2-常量"><a href="#1-2-常量" class="headerlink" title="1.2 常量"></a>1.2 常量</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> AMOUNT = <span class="number">100</span></span><br><span class="line">    <span class="type">int</span> price = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入金额（元）：&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;price);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> change = AMOUNT - price;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;找您%d元\n&quot;</span>, change);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -185,7 +185,7 @@
 </ul>
 <h2 id="1-3-浮点数"><a href="#1-3-浮点数" class="headerlink" title="1.3 浮点数"></a>1.3 浮点数</h2><ul>
 <li>带小数点的数值。浮点这个词的本意就是指小数点是浮动的，是计算机内部表达非整数（包含分数和无理数）的一种方式。</li>
-<li>当浮点数和整数放到一起运算时，C会将整数转换成__浮点数__，然后进行浮点数的运算。</li>
+<li>当浮点数和整数放到一起运算时，C会将整数转换成<strong>浮点数</strong>，然后进行浮点数的运算。</li>
 </ul>
 <h2 id="1-4-运算符"><a href="#1-4-运算符" class="headerlink" title="1.4 运算符"></a>1.4 运算符</h2><table>
 <thead>
@@ -292,7 +292,7 @@
 <h1 id="2-判断"><a href="#2-判断" class="headerlink" title="2 判断"></a>2 判断</h1><h2 id="2-1-多路分支switch-case"><a href="#2-1-多路分支switch-case" class="headerlink" title="2.1 多路分支switch-case"></a>2.1 多路分支switch-case</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (控制表达式) &#123;</span><br><span class="line">    <span class="keyword">case</span> 常量:</span><br><span class="line">        语句</span><br><span class="line">    <span class="keyword">case</span> 常量:</span><br><span class="line">    	语句</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">    	语句    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>控制表达式只能是__整数__类型的结果</li>
+<li>控制表达式只能是<strong>整数</strong>类型的结果</li>
 <li>常量可以是常数，也可以是常数计算的表达式</li>
 </ul>
 <h2 id="2-2-循环"><a href="#2-2-循环" class="headerlink" title="2.2 循环"></a>2.2 循环</h2><ul>
@@ -321,7 +321,7 @@
 <li>sizeof(i)</li>
 </ul>
 </li>
-<li><p>是__静态运算符__，它的结果在编译时刻就决定了</p>
+<li><p>是<strong>静态运算符</strong>，它的结果在编译时刻就决定了</p>
 </li>
 <li><p>不要在sizeof的括号里做运算，这些运算不会做的</p>
 </li>
@@ -363,8 +363,8 @@
 </li>
 </ul>
 <h3 id="3-1-4-浮点数"><a href="#3-1-4-浮点数" class="headerlink" title="3.1.4 浮点数"></a>3.1.4 浮点数</h3><ul>
-<li>printf输出inf表示__超过范围__的浮点数：±∞</li>
-<li>printf输出nan表示__不存在__的浮点数</li>
+<li>printf输出inf表示<strong>超过范围</strong>的浮点数：±∞</li>
+<li>printf输出nan表示<strong>不存在</strong>的浮点数</li>
 </ul>
 <p>运算精度</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">float</span> a, b, c;</span><br><span class="line">    </span><br><span class="line">    a = <span class="number">1.345f</span>;</span><br><span class="line">    b = <span class="number">1.123f</span>;</span><br><span class="line">    c = a + b;</span><br><span class="line">    <span class="keyword">if</span>(c == <span class="number">2.468</span>)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;相等\n&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    	<span class="built_in">printf</span>(<span class="string">&quot;不相等! c=%.10f,或%f\n&quot;</span>,c, c);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -405,7 +405,7 @@
 <li>(short)32768</li>
 </ul>
 </li>
-<li><p>只是从那个变量计算出了一个__新的类型的值__，它并不改变那个变量，无论是值还是类型都不改变</p>
+<li><p>只是从那个变量计算出了一个<strong>新的类型的值</strong>，它并不改变那个变量，无论是值还是类型都不改变</p>
 </li>
 </ul>
 <h2 id="3-3-逻辑运算"><a href="#3-3-逻辑运算" class="headerlink" title="3.3 逻辑运算"></a>3.3 逻辑运算</h2><table>
@@ -487,7 +487,7 @@
 </tr>
 </tbody></table>
 <h3 id="3-3-2-短路"><a href="#3-3-2-短路" class="headerlink" title="3.3.2 短路"></a>3.3.2 短路</h3><ul>
-<li><p>逻辑运算是自左向右进行的，如果左边的结果已经能够决定结果了，就不会做右边的计算</p>
+<li><p>逻辑运算是自左向右进行的，&#x3D;&#x3D;如果左边的结果已经能够决定结果了，就不会做右边的计算&#x3D;&#x3D;</p>
 <ul>
 <li>a&#x3D;&#x3D;6 &amp;&amp; b&#x3D;&#x3D;1</li>
 <li>a&#x3D;&#x3D;6 &amp;&amp; b+&#x3D;1</li>
@@ -497,7 +497,7 @@
 </li>
 <li><p>对于||，左边是true时就不做右边了</p>
 </li>
-<li><p><strong>不要把赋值，包括复合赋值组合进表达式</strong></p>
+<li><p>&#x3D;&#x3D;不要把赋值，包括复合赋值组合进表达式&#x3D;&#x3D;</p>
 </li>
 </ul>
 <h2 id="3-4-条件运算符"><a href="#3-4-条件运算符" class="headerlink" title="3.4 条件运算符"></a>3.4 条件运算符</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">count = (count &gt; <span class="number">20</span>)?count<span class="number">-10</span>:count+<span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(count&gt;<span class="number">20</span>)</span><br><span class="line">    count = count - <span class="number">10</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    count = count + <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
@@ -506,7 +506,7 @@
 <li>条件运算符额优先级高于赋值运算符，但是低于其他运算符</li>
 </ul>
 <h3 id="3-4-1-逗号运算符"><a href="#3-4-1-逗号运算符" class="headerlink" title="3.4.1 逗号运算符"></a>3.4.1 逗号运算符</h3><ul>
-<li>逗号用来连接两个表达式，并以其__右边__的表达式的值作为它的__结果__。逗号的优先级是所有的运算符中__最低__的，所以它两边的表达式会先计算；逗号的组合关系是自左向右，所以左边的表达式会先计算，而右边的表达式的值就留下来作为逗号运算的结果。</li>
+<li>逗号用来连接两个表达式，并以其<strong>右边</strong>的表达式的值作为它的<strong>结果</strong>。逗号的优先级是所有的运算符中<strong>最低</strong>的，所以它两边的表达式会先计算；逗号的组合关系是自左向右，所以左边的表达式会先计算，而右边的表达式的值就留下来作为逗号运算的结果。</li>
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    i = <span class="number">3</span>+<span class="number">4</span>,<span class="number">5</span>+<span class="number">6</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, i);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -539,8 +539,8 @@
 </li>
 <li><p>本地变量是定义在块内的</p>
 <ul>
-<li>它可以是定义在__函数的块内__</li>
-<li>也可以定义在__语句的块内__</li>
+<li>它可以是定义在<strong>函数的块内</strong></li>
+<li>也可以定义在<strong>语句的块内</strong></li>
 <li>甚至可以随便拉一对大括号来定义变量</li>
 </ul>
 </li>
@@ -548,11 +548,11 @@
 </li>
 <li><p>块外面定义的变量在里面仍然有效</p>
 </li>
-<li><p>块里面定义了和外面同名的变量则__掩盖了外面__的</p>
+<li><p>块里面定义了和外面同名的变量则<strong>掩盖了外面</strong>的</p>
 </li>
 <li><p>不能在一个块内定义同名的变量</p>
 </li>
-<li><p>本地变量__不会被默认初始化__</p>
+<li><p>本地变量<strong>不会被默认初始化</strong></p>
 </li>
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">5</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(a&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="type">int</span> a=<span class="number">6</span>;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -560,7 +560,7 @@
 <h1 id="5-数组"><a href="#5-数组" class="headerlink" title="5 数组"></a>5 数组</h1><ul>
 <li>其中所有的元素具有相同的数据类型</li>
 <li>一旦创建，不能改变大小</li>
-<li>*数组中的元素在内存中是__连续依次__排列的</li>
+<li>*数组中的元素在内存中是<strong>连续依次</strong>排列的</li>
 </ul>
 
       </div>
