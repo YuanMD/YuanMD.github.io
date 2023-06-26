@@ -11,7 +11,7 @@
   
   <title>
     
-      归档 
+      python基础 
       
       
       |
@@ -99,86 +99,131 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">python基础</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-05-24 16:23:42
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/05/18/%E5%88%BA%E5%AE%A2%E4%BF%A1%E6%9D%A1/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-05-24 16:23:42
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2023/06/26/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
         </div>
       
-      <div class="post-item" title="重识别">
-        <div class="time-m-d">06-26</div>
-        <div class="title">
-          <a href="/2023/06/26/%E9%87%8D%E8%AF%86%E5%88%AB/">
-            <span>重识别</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="CV">
-        <div class="time-m-d">06-26</div>
-        <div class="title">
-          <a href="/2023/06/26/CV/">
-            <span>CV</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="C++学习笔记">
-        <div class="time-m-d">06-26</div>
-        <div class="title">
-          <a href="/2023/06/26/C-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-            <span>C++学习笔记</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="python基础">
-        <div class="time-m-d">05-24</div>
-        <div class="title">
-          <a href="/2023/05/24/python%E5%9F%BA%E7%A1%80/">
-            <span>python基础</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="刺客信条">
-        <div class="time-m-d">05-18</div>
-        <div class="title">
-          <a href="/2023/05/18/%E5%88%BA%E5%AE%A2%E4%BF%A1%E6%9D%A1/">
-            <span>刺客信条</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="胶囊神经网络">
-        <div class="time-m-d">04-24</div>
-        <div class="title">
-          <a href="/2023/04/24/%E8%83%B6%E5%9B%8A%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
-            <span>胶囊神经网络</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="C语言学习笔记">
-        <div class="time-m-d">04-10</div>
-        <div class="title">
-          <a href="/2023/04/10/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-            <span>C语言学习笔记</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'KbaxG558hv0SdnpkKR85jU0c-gzGzoHsz',
+        appKey: 'afrHpcNb2l5FyFGgHFtw5k3Z',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -434,6 +479,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + python%E5%9F%BA%E7%A1%80 + '&url=' + https%3A%2F%2Fyuanmd.github.io%2F2023%2F05%2F24%2Fpython%25E5%259F%25BA%25E7%25A1%2580%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://yuanmd.github.io/2023/05/24/python%E5%9F%BA%E7%A1%80/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
